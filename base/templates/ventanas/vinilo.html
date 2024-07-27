@@ -6,5 +6,9 @@
 </head>
 <body>
     <h1>Vista vinilos</h1>
+    <h3>Listado de vinilos:</h3>
+    {% for vinilo in vinilos %}
+    	{{ vinilo.artista }} - {{ vinilo.album }} - {{ vinilo.genero }} - {{ vinilo.precio }}
+    {% endfor %}
 </body>
 </html>
