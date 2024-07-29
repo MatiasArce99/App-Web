@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Proyecto</title>
-</head>
-<body>
-    <h1>Vista vinilos</h1>
-    <h3>Listado de vinilos:</h3>
+{% extends 'ventanas/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1>Listado de vinilos:</h1>
     {% for vinilos in vinilo %}
         <ul>
-            <li><strong>Artista:</strong> {{ vinilos.artista }} - <strong>Álbum:</strong> {{ vinilos.album }} - <strong>Género:</strong> {{ vinilos.genero }} - <strong>Precio:</strong> ${{ vinilos.precio }}</li>
+            <li><strong>Artista:</strong> {{ vinilos.artista }} - <strong>Álbum:</strong> {{ vinilos.album }} -
+                <strong>Género:</strong> {{ vinilos.genero }} - <strong>Precio:</strong> ${{ vinilos.precio }}</li>
         </ul>
     {% endfor %}
-</body>
-</html>
+{% endblock %}

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Proyecto</title>
-</head>
-<body>
-    <h1>Vista de los parlantes/monitores</h1>
-</body>
-</html>
+{% extends 'ventanas/base.html' %}
+{% load static %}
+{% block contenido %}
+<h1>Lista de parlantes disponibles:</h1>
+    {% for parlantes in parlante %}
+        <ul>
+            <li><strong>Marca: </strong>{{ parlantes.marca }} - <strong>Tipo: </strong>{{ parlantes.tipo }} -
+                <strong>Potencia: </strong>{{ parlantes.potencia }} - <strong>Precio: $</strong>{{ parlantes.precio }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
