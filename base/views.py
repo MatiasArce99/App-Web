@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from .models import Vinilo
+from .models import *
 def ventana_index(request):
     return render(request, 'ventanas/inicio.html')
 def ventana_vinilo(request):
     vinilos = Vinilo.objects.all()
-    return render(request, 'ventanas/vinilo.html', {'vinilos': vinilos})
+    contexto = {'vinilo': vinilos}
+    return render(request, 'ventanas/vinilo.html', contexto)
 def ventana_parlante(request):
-    return render(request, 'ventanas/parlante.html')
+    parlantes = Parlante.objects.all()
+    contexto = {'parlante': parlantes}
+    return render(request, 'ventanas/parlante.html', contexto)
 def ventana_reproductor(request):
-    return render(request, 'ventanas/reproductor.html')
+    reproductor = Reproductor.objects.all()
+    contexto = {'rep': reproductor}
+    return render(request, 'ventanas/reproductor.html', contexto)
