@@ -5,6 +5,17 @@
     <title>Proyecto</title>
 </head>
 <body>
-
+    <form action="/base/reproductorFormulario/" method="post">{% csrf_token %}
+        <p>Marca: <label>
+            <input type="text" name="marca">
+        </label></p>
+        <p>Modelo: <label>
+            <input type="text" name="modelo">
+        </label></p>
+        <p>Precio: <label>
+            <input type="text" name="precio">
+        </label></p>
+        <button type="submit" value="enviar">Registrar</button>
+    </form>
 </body>
 </html>

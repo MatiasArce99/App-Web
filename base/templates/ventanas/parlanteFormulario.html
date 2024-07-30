@@ -5,6 +5,20 @@
     <title>Proyecto</title>
 </head>
 <body>
-
+    <form action="/base/parlanteFormulario/" method="post">{% csrf_token %}
+        <p>Marca: <label>
+            <input type="text" name="marca">
+        </label></p>
+        <p>Tipo: <label>
+            <input type="text" name="tipo">
+        </label></p>
+        <p>Potencia: <label>
+            <input type="text" name="potencia">
+        </label></p>
+        <p>Precio: <label>
+            <input type="text" name="precio">
+        </label></p>
+        <button type="submit" value="enviar">Registrar</button>
+    </form>
 </body>
 </html>
