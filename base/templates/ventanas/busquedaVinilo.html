@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto</title>
+</head>
+<body>
+    <form action="/base/buscar/" method="GET">
+        {% csrf_token %}
+        <p>Artista: <label>
+            <input type="text" name="artista">
+        </label></p>
+        <button type="submit" value="buscar">Buscar</button>
+    </form>
+</body>
+</html>

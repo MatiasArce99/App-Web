@@ -9,4 +9,6 @@ urlpatterns = [
     path('viniloFormulario/', viniloFormulario, name='viniloFormulario'),
     path('parlanteFormulario/', parlanteFormulario, name='parlanteFormulario'),
     path('reproductorFormulario/', reproductorFormulario, name='reproductorFormulario'),
+    path('busquedaVinilo/', busquedaVinilo, name='busquedaVinilo'),
+    path('buscar/', buscar, name='buscar'),
 ]

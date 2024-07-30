@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h1>Resultado de la búsqueda de: {{ artista }}</h1>
+    {% if vinilos %}
+        <ul>
+        {% for vinilo in vinilos %}
+            <li>{{ vinilo.artista }}</li>
+            <li>{{ vinilo.album }}</li>
+            <li>{{ vinilo.genero }}</li>
+            <li>{{ vinilo.precio }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
