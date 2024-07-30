@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto</title>
+</head>
+<body>
+    <form action="/base/viniloFormulario/" method="post">{% csrf_token %}
+        <p>Artista: <label>
+            <input type="text" name="artista">
+        </label></p>
+        <p>Álbum: <label>
+            <input type="text" name="album">
+        </label></p>
+        <p>Género: <label>
+            <input type="text" name="genero">
+        </label></p>
+        <p>Precio: <label>
+            <input type="number" name="precio">
+        </label></p>
+        <button type="submit" value="enviar">Registrar</button>
+    </form>
+</body>
+</html>
